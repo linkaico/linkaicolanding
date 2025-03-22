@@ -40,6 +40,7 @@ const Navbar = () => {
               <NavLink href="#solution">Lösung</NavLink>
               <NavLink href="#process">Prozess</NavLink>
               <NavLink href="#faq">FAQ</NavLink>
+              <NavLink href="/blog">Blog</NavLink>
             </nav>
             <div className="md:hidden">
               <MobileMenu onContactClick={() => setIsContactModalOpen(true)} />
@@ -124,6 +125,7 @@ const MobileMenu = ({ onContactClick }: { onContactClick: () => void }) => {
             <MobileNavLink href="#solution" onClick={() => setIsOpen(false)}>Lösung</MobileNavLink>
             <MobileNavLink href="#process" onClick={() => setIsOpen(false)}>Prozess</MobileNavLink>
             <MobileNavLink href="#faq" onClick={() => setIsOpen(false)}>FAQ</MobileNavLink>
+            <MobileNavLink href="/blog" onClick={() => setIsOpen(false)}>Blog</MobileNavLink>
             <motion.button
               onClick={() => {
                 setIsOpen(false);
