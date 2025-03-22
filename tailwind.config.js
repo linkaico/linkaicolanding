@@ -15,8 +15,13 @@ module.exports = {
         foreground: 'var(--foreground)',
       },
       fontFamily: {
-        sans: ['var(--font-sans)'],
-        mono: ['var(--font-mono)'],
+        heading: ['var(--font-heading)'],
+        body: ['var(--font-body)'],
+        mono: ['var(--font-code)'],
+      },
+      letterSpacing: {
+        tighter: 'var(--letter-spacing-tight)',
+        wider: 'var(--letter-spacing-wide)',
       },
     },
   },

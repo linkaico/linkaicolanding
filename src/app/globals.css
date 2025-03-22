@@ -15,6 +15,11 @@
   --gray-800: #2d3748;
   --gray-900: #1a202c;
   --base-font-size: 1.05rem;
+  --font-heading: var(--font-poppins);
+  --font-body: var(--font-montserrat);
+  --font-code: var(--font-geist-mono);
+  --letter-spacing-tight: -0.025em;
+  --letter-spacing-wide: 0.025em;
 }
 
 @theme inline {
@@ -23,8 +28,6 @@
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
   --color-accent: var(--accent);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -44,17 +47,49 @@
   body {
     background: var(--background);
     color: var(--foreground);
-    font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+    font-family: var(--font-body), system-ui, sans-serif;
     font-size: var(--base-font-size);
+    line-height: 1.7;
   }
   
-  h1, .h1 { font-size: 2.5rem; }
-  h2, .h2 { font-size: 2rem; }
-  h3, .h3 { font-size: 1.5rem; }
-  h4, .h4 { font-size: 1.25rem; }
-  p, .text-base { font-size: 1.05rem; }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading), system-ui, sans-serif;
+    font-weight: 600;
+    letter-spacing: var(--letter-spacing-tight);
+    line-height: 1.2;
+  }
+  
+  h1, .h1 { 
+    font-size: 2.5rem; 
+    margin-bottom: 1.5rem;
+  }
+  
+  h2, .h2 { 
+    font-size: 2rem; 
+    margin-bottom: 1.25rem;
+  }
+  
+  h3, .h3 { 
+    font-size: 1.5rem; 
+    margin-bottom: 1rem;
+  }
+  
+  h4, .h4 { 
+    font-size: 1.25rem; 
+    margin-bottom: 0.75rem;
+  }
+  
+  p, .text-base { 
+    font-size: 1.05rem; 
+    margin-bottom: 1rem;
+  }
+  
   .text-sm { font-size: 0.95rem; }
   .text-xs { font-size: 0.85rem; }
+  
+  code, pre {
+    font-family: var(--font-code), monospace;
+  }
 }
 
 @keyframes gradient-animation {
