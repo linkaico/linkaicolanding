@@ -3,11 +3,24 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary: #0070f3;
+  --primary-dark: #005cc5;
+  --secondary: #6c2bd9;
+  --accent: #00c3ff;
+  --gray-100: #f7fafc;
+  --gray-200: #edf2f7;
+  --gray-300: #e2e8f0;
+  --gray-800: #2d3748;
+  --gray-900: #1a202c;
+  --base-font-size: 1.05rem;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -16,11 +29,52 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --primary: #3291ff;
+    --secondary: #8b5cf6;
+    --gray-100: #1f2937;
+    --gray-200: #374151;
+    --gray-800: #e5e7eb;
+    --gray-900: #f3f4f6;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  font-size: var(--base-font-size);
+}
+
+h1, .h1 { font-size: 2.5rem; }
+h2, .h2 { font-size: 2rem; }
+h3, .h3 { font-size: 1.5rem; }
+h4, .h4 { font-size: 1.25rem; }
+p, .text-base { font-size: 1.05rem; }
+.text-sm { font-size: 0.95rem; }
+.text-xs { font-size: 0.85rem; }
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 200%;
+  animation: gradient-animation 6s ease infinite;
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  background-size: 200% 200%;
+  animation: gradient-animation 8s ease infinite;
 }
