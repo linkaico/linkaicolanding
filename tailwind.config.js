@@ -8,9 +8,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#3490dc',
-        secondary: '#ffed4a',
-        danger: '#e3342f',
+        primary: 'var(--primary)',
+        secondary: 'var(--secondary)',
+        accent: 'var(--accent)',
+        background: 'var(--background)',
+        foreground: 'var(--foreground)',
+      },
+      fontFamily: {
+        sans: ['var(--font-sans)'],
+        mono: ['var(--font-mono)'],
       },
     },
   },
