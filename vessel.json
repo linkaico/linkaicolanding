@@ -1,0 +1,17 @@
+{
+  "name": "linkaico-landing",
+  "type": "web",
+  "domains": ["linkaicolanding"],
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "builds": [
+    {
+      "cmd": "npm run build"
+    }
+  ],
+  "start": {
+    "cmd": "npm start"
+  },
+  "publicDir": ".next"
+} 
